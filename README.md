@@ -1,6 +1,6 @@
 #Basic Monte Carlo Simulation
 
-<img src="./AAPL_sim.png" alt="Monte Carlo Example" title="Example Monte Carlo simulation (AAPL)" width="280" height="466" align="center" /> 
+<img src="./AAPL_sim.png" alt="Monte Carlo Example" title="Example Monte Carlo simulation (AAPL)" width="640" height="480" align="center" /> 
 
 <p>This project allows the user to run Monte Carlo simulations on any ticker covered by Yahoo.<\p>
 
