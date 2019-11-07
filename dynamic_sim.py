@@ -75,7 +75,7 @@ while not "q" in end:
 
 
     # Number of different Simulations
-    simulations = 1000
+    simulations = int(input("Select the number of individual scenarios that you want to simulate: "))
 
     #Simulate one Trading year
     days = 252

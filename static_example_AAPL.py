@@ -63,4 +63,5 @@ plt.plot(simulation_df)
 plt.axhline(y=current_price, color='r', linestyle='-')
 plt.xlabel('Day')
 plt.ylabel('Price')
+
 plt.show()
