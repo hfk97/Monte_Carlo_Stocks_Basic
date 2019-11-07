@@ -1,6 +1,6 @@
 # Basic Monte Carlo Simulation
 
-<img src="./AAPL_sim.png" alt="Monte Carlo Example" title="Example Monte Carlo simulation (AAPL)" width="640" height="480" align="middle" /> 
+<div style="text-align:center"><img src="./AAPL_sim.png" alt="Monte Carlo Example" title="Example Monte Carlo simulation (AAPL)" width="640" height="480" align="middle" /></div>
 
 This project allows the user to run Monte Carlo simulations on any ticker covered by Yahoo.
 
@@ -17,6 +17,6 @@ This project allows the user to run Monte Carlo simulations on any ticker covere
 </ul>
 </p>
 
-<p>All simulations are run for the following trading year, i.e. 252 days.<\p>
+All simulations are run for the following trading year, i.e. 252 days.
 
 <p><em><strong>Disclaimer: </strong>This was a short side project of mine, the interface is not very user friendly, e.g. you will get ValueErrors if you enter false values. Entering false tickers will also not yield results or lead to wrong results.</em></p>
