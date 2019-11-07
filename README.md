@@ -2,11 +2,11 @@
 
 <img src="./AAPL_sim.png" alt="Monte Carlo Example" title="Example Monte Carlo simulation (AAPL)" width="640" height="480" align="middle" /> 
 
-<p>This project allows the user to run Monte Carlo simulations on any ticker covered by Yahoo. <\p>
+This project allows the user to run Monte Carlo simulations on any ticker covered by Yahoo.
 
-<p>"static_example_AAPL.py" runs a Monte Carlo simulation on the "AAPL.csv" return data within this repository and is ment as a proof of concept<\p>
+"static_example_AAPL.py" runs a Monte Carlo simulation on the "AAPL.csv" return data within this repository and is ment as a proof of concept.
 
-<p>"dynamic_sim.py" allows the user to run a Monte Carlo simulations and gives him the freedom to make the following choices:<\p>
+"dynamic_sim.py" allows the user to run a Monte Carlo simulations and gives him the freedom to make the following choices:
 
 <ul>
 <li>Ticker</li>
