@@ -69,7 +69,7 @@ def main():
                                 f" at {now.strftime('%m:%H')}.The results project the next trading year (i.e. 252 days).")
 
             simulation_df.to_csv(f"./{ticker}/{now.strftime('%m-%d-%Y-%m-%H')}/simdata.csv")
-            fig1.savefig(f"./{ticker}/{now.strftime('%m-%d-%Y-%m-%H')}/visualisation.png", dpi=100)
+            fig1.savefig(f"./{ticker}/{now.strftime('%m-%d-%Y-%m-%H')}/visualisation.png", dpi=300)
             print("Data saved.")
 
         end += (input("If you want to run another Simulation hit enter, else type q: "))

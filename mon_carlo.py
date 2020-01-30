@@ -25,9 +25,10 @@ def mon_sim(closing_prices, simulations, days=252):
     # dataframe for the results
     simulation_df = pd.DataFrame()
     # current price
-    current_price = closing_prices[-1]
+    current_price = closing_prices.iloc[-1]
     # daily returns
     returns = closing_prices.pct_change()
+    mu = returns.mean()
     daily_vol = returns.std()
 
     for x in range(0, simulations):
@@ -36,7 +37,7 @@ def mon_sim(closing_prices, simulations, days=252):
         price_sim.append(price)
 
         for y in range(0, days):
-            price = price * (1 + np.random.normal(0, daily_vol))
+            price = price * (1 + np.random.normal(mu, daily_vol))
             price_sim.append(price)
 
         simulation_df[x] = price_sim

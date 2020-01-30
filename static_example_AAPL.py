@@ -20,23 +20,29 @@ def getpack(package):
 datetime = getpack("datetime")
 pd = getpack("pandas")
 
-ticker = "AAPL"
 
-# load stock returns
-AAPL_df = pd.read_csv("./AAPL.csv", index_col=0)
-AAPL_df['date'] = pd.to_datetime(AAPL_df['date'], format='%d/%m/%Y')
+def main():
+    ticker = "AAPL"
 
-# current prices
-current_price = AAPL_df.iloc[-1, 2]
+    # load stock returns
+    AAPL_df = pd.read_csv("./AAPL.csv", index_col=0)
+    AAPL_df['date'] = pd.to_datetime(AAPL_df['date'], format='%d/%m/%Y')
 
-closing_prices = AAPL_df.loc[:, 2]
+    # current prices
+    current_price = AAPL_df.iloc[-1, 2]
 
-# number of different Simulations
-simulations = 500
+    closing_prices = AAPL_df.iloc[:, 2]
 
-# simulate one Trading year
-days = 252
+    # number of different Simulations
+    simulations = 150
 
-simulation_df = mon_carlo.mon_sim(closing_prices, simulations)
+    # simulate one Trading year
+    days = 252
 
-mon_carlo.sim_plot(simulation_df, current_price, ticker)
+    simulation_df = mon_carlo.mon_sim(closing_prices, simulations)
+
+    mon_carlo.sim_plot(simulation_df, current_price, ticker).savefig("./AAPL_sim.png",dpi=300)
+
+
+if __name__ == "__main__":
+    main()
