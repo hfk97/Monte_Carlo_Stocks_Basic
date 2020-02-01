@@ -45,7 +45,8 @@ def mon_sim(closing_prices, simulations, days=252):
     return simulation_df
 
 
-def sim_plot(simulation_df, current_price, ticker):
+def sim_plot(simulation_df, ticker):
+    current_price = simulation_df.iloc[0, 0]
     plt.title('Monte Carlo Simulation: ' + str(ticker))
     plt.plot(simulation_df)
     plt.axhline(y=current_price, color='r', linestyle='-')

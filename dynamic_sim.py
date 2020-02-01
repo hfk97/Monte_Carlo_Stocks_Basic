@@ -48,10 +48,8 @@ def main():
         # do monte carlo simulation (252 days is default)
         simulation_df = mon_carlo.mon_sim(closing_prices, simulations)
 
-        # current price
-        current_price = closing_prices[-1]
         # visualize
-        fig1 = mon_carlo.sim_plot(simulation_df, current_price, ticker)
+        fig1 = mon_carlo.sim_plot(simulation_df, ticker)
 
         # saveimage and simdata
         if input("If you want to save this simulation data and the graph hit any key and enter, else just press enter: "):
