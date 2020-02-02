@@ -21,12 +21,12 @@ matplotlib = getpack("matplotlib")
 import matplotlib.pyplot as plt
 
 
-def mon_sim(closing_prices, simulations, days=252):
+def mon_sim(closing_prices, simulations, timeframe=252):
     # dataframe for the results
     simulation_df = pd.DataFrame()
     # current price
     current_price = closing_prices.iloc[-1]
-    # daily returns
+    # get returns in percentage
     returns = closing_prices.pct_change()
     mu = returns.mean()
     daily_vol = returns.std()
@@ -36,7 +36,7 @@ def mon_sim(closing_prices, simulations, days=252):
         price = current_price
         price_sim.append(price)
 
-        for y in range(0, days):
+        for y in range(0, timeframe):
             price = price * (1 + np.random.normal(mu, daily_vol))
             price_sim.append(price)
 
